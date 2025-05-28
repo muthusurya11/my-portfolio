@@ -40,40 +40,78 @@ section {
 
 
 .container {
-    position: relative;
-
+  position: relative;
 }
 
 .tphead {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 25px 4%;
-    background: var(--bg-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 4%;
+  background: var(--bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
 }
 
-
 .logo {
-    font-size: 25px;
-    font-weight: 700;
-    color: var(--text-color);
-    text-decoration: none;
-    cursor: default;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--text-color);
+  text-decoration: none;
+  cursor: default;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
 }
 
 .navbar a {
-    color: var(--text-color);
-    font-size: 18px;
-    text-decoration: none;
-    font-weight: 500;
-    margin-left: 3rem;
-    border-bottom: 2px solid transparent;
-    transition: .5s;
+  color: var(--text-color);
+  font-size: 18px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 3rem;
+  border-bottom: 2px solid transparent;
+  transition: .5s;
+}
+
+/* Hide toggle by default */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--text-color);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .menu-toggle {
+      display: block;
+  }
+
+  .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--bg-color);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 1rem 4%;
+      display: none;
+  }
+
+  .navbar.active {
+      display: flex;
+  }
+
+  .navbar a {
+      margin: 1rem 0;
+  }
 }
 
 .navbar a:hover, 
@@ -150,7 +188,6 @@ span {
 }
 
 
-
 .home-details .social-icons {
     margin-left: 20px;
 }
@@ -199,11 +236,6 @@ span {
       border: 6px solid var(--main-color);    /*img incomplete*/
 }
 
-.heading {
-    text-align: center;
-    font-size: 3.5rem;
-    
-}
 
 .about-content h2 {
         text-align: left;
@@ -263,6 +295,8 @@ span {
 .education{
 	width: 100%;
 	padding: 35px 10%;
+  display: flex;
+  
 }
 
 .education{
@@ -531,3 +565,55 @@ main.row{
 }
 
 /*Footer Ends*/
+
+
+
+
+/* reponsive */
+
+@media (max-width: 768px)  {
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--bg-color);
+    padding: 1rem 4%;
+    align-items: center;
+}
+
+.navbar.active {
+    display: flex;
+}
+}
+
+@media (max-width: 768px)  {
+      main.row{
+        grid-template-columns: 1fr;
+      }
+
+      .row .col:nth-child(2){
+          margin-top: 30px;
+      }
+
+      .title > h2{
+        display: inline-block;
+        text-align: center;
+        width: 80%;
+      }
+
+      .title > div{
+        display: none;
+      }
+
+}
+
+
+
+
+
+
