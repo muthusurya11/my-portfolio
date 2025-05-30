@@ -191,7 +191,7 @@ body {
 .hmbtn:hover {
   background: transparent;
   box-shadow: none;
-  color: white;
+  color: var(--text-color);
 }
 
 
@@ -272,10 +272,6 @@ body {
   text-align:center;
 }
 
-
-
-
-
   }
 
 
@@ -321,7 +317,7 @@ body {
 .abbtn:hover {
   background: transparent;
   box-shadow: none;
-  color: white;
+  color: var(--text-color);
 }
 /*Skills Starts*/
 
@@ -468,11 +464,7 @@ main.row{
   border-radius: 12px;
 }
 
-@media only screen and (max-width: 600px) {
-    
 
-  
-}
 
 /*Education Ends*/
 
@@ -924,3 +916,42 @@ main.row{
     font-size: 1.6rem;
   }
 }
+
+
+
+/* Medium screens - Tablet */
+@media (min-width: 600px) {
+  .input-box {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .input-box input {
+    width: 100%;
+  }
+
+  form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Large screens - Desktop */
+@media (min-width: 1024px) {
+  .contact {
+    padding: 4rem 0;
+  }
+
+  .contheading {
+    font-size: 2.5rem;
+  }
+
+  form {
+    max-width: 800px;
+  }
+
+  textarea {
+    height: 200px;
+  }
+}
+
