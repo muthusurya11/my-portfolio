@@ -335,7 +335,7 @@ body {
   flex-direction: column;
   max-width: 400px;
   min-height: 200px;
-
+  align-items: stretch;
 }
 
 .skills-heading{
@@ -359,7 +359,7 @@ body {
 .skills-container .skills-box {
     flex: 1 1 20rem;
     background: var(--snd-bf-color);
-    padding: 3rem 2.7rem 5rem;
+    padding: 50px 30px;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
@@ -384,6 +384,14 @@ body {
 
 .skills-box p{
   margin-top: -20px;
+}
+
+@media (max-width: 768px) {
+  .skills{
+    padding: 30px 20px;
+  }
+
+
 }
 /*Skills Ends*/
 
