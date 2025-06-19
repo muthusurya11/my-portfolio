@@ -705,6 +705,13 @@ main.row{
   textarea:focus {
     border: 2px solid var(--main-color);
   }
+
+  .no-arrows::-webkit-inner-spin-button,
+.no-arrows::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
   
   /*Contact Ends*/
 
